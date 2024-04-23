@@ -22,20 +22,22 @@ def write_user_tasks_to_file():
     employee = json.loads(user_json.read())
     employee_name = employee['name']
 
-    with open('USER_ID.csv', 'a') as afile:
-        for task in todos:
-            user_id = task['userId']
-            status = task['completed']
-            title = task['title']
+    data_string = ""
 
-            value_for_line = (
-                f'\"{user_id}\",'
-                f'\"{employee_name}\",'
-                f'\"{status}\",'
-                f'\"{title}\"\n'
-            )
+    for task in todos:
+        user_id = task['userId']
+        status = task['completed']
+        title = task['title']
 
-            afile.write(value_for_line)
+        data_string += (
+            f'\"{user_id}\",'
+            f'\"{employee_name}\",'
+            f'\"{status}\",'
+            f'\"{title}\"\n'
+        )
+
+    with open('USER_ID.csv', 'w') as afile:
+        afile.write(data_string)
 
 
 if __name__ == "__main__":
