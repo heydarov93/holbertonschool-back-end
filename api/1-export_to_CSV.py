@@ -41,4 +41,5 @@ def write_user_tasks_to_file():
 
 
 if __name__ == "__main__":
-    write_user_tasks_to_file()
+    if len(argv) == 2:
+        write_user_tasks_to_file()
