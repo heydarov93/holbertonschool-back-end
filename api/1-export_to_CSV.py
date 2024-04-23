@@ -25,15 +25,14 @@ def write_user_tasks_to_file():
     data_string = ""
 
     for task in todos:
-        user_id = task['userId']
         status = task['completed']
         title = task['title']
 
         data_string += (
-                f'\"{user_id}\",'
-                f'\"{employee_name}\",'
-                f'\"{status}\",'
-                f'\"{title}\"\n'
+                f'"{employee_id}",'
+                f'"{employee_name}",'
+                f'"{status}",'
+                f'"{title}"\n'
         )
 
     with open('USER_ID.csv', 'w') as afile:
