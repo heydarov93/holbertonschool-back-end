@@ -29,7 +29,7 @@ def write_user_tasks_to_file():
         status = task['completed']
         title = task['title']
 
-        data_string += (      
+        data_string += (
                 f'\"{user_id}\",'
                 f'\"{employee_name}\",'
                 f'\"{status}\",'
