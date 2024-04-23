@@ -9,7 +9,7 @@ from sys import argv
 from urllib import request
 
 
-if __name__ == "__main__":
+def write_user_tasks_to_file():
     employee_id = argv[1]
 
     todos_json = request.urlopen('https://jsonplaceholder.typicode.com/' +
@@ -36,3 +36,7 @@ if __name__ == "__main__":
             )
 
             afile.write(value_for_line)
+
+
+if __name__ == "__main__":
+    write_user_tasks_to_file()
