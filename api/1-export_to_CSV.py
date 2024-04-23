@@ -35,7 +35,8 @@ def write_user_tasks_to_file():
                 f'"{title}"\n'
         )
 
-    with open('USER_ID.csv', 'w') as afile:
+    filename = argv[1] + '.csv'
+    with open(filename, 'w') as afile:
         afile.write(data_string)
 
 
